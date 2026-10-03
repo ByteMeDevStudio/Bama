@@ -1,0 +1,13 @@
+{
+  "rankings": [
+    {
+      "name": "AP Top 25",
+      "shortName": "AP Poll",
+      "headline": "2026 NCAA Football Rankings - AP Top 25 Week 6",
+      "ranks": [
+        { "current": 1, "previous": 1, "points": 1550, "firstPlaceVotes": 50, "trend": "-", "recordSummary": "5-0", "team": { "id": "194", "location": "Ohio State", "name": "Buckeyes", "abbreviation": "OSU", "logos": [{ "href": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png" }] } },
+        { "current": 6, "previous": 8, "points": 1201, "firstPlaceVotes": 0, "trend": "+2", "recordSummary": "4-1", "team": { "id": "333", "location": "Alabama", "name": "Crimson Tide", "abbreviation": "ALA", "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png" } }
+      ]
+    }
+  ]
+}

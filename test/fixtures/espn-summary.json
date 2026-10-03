@@ -1,0 +1,68 @@
+{
+  "header": {
+    "id": "401800004",
+    "season": { "year": 2026, "type": 2 },
+    "week": 6,
+    "competitions": [
+      {
+        "id": "401800004",
+        "date": "2026-10-03T19:30Z",
+        "neutralSite": false,
+        "conferenceCompetition": true,
+        "competitors": [
+          { "id": "333", "homeAway": "home", "possession": true, "team": { "id": "333", "location": "Alabama", "name": "Crimson Tide", "abbreviation": "ALA", "displayName": "Alabama Crimson Tide", "color": "9e1b32", "logos": [{ "href": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png" }] }, "score": "17", "linescores": [{ "displayValue": "7" }, { "displayValue": "10" }], "record": [{ "type": "total", "summary": "4-1" }], "rank": 6 },
+          { "id": "2", "homeAway": "away", "team": { "id": "2", "location": "Auburn", "name": "Tigers", "abbreviation": "AUB", "displayName": "Auburn Tigers", "color": "03244d" }, "score": "10", "linescores": [{ "displayValue": "3" }, { "displayValue": "7" }], "record": [{ "type": "total", "summary": "3-2" }] }
+        ],
+        "status": { "displayClock": "4:12", "period": 3, "type": { "state": "in", "completed": false, "detail": "4:12 - 3rd Quarter", "shortDetail": "4:12 - 3rd" } },
+        "broadcasts": [{ "type": { "shortName": "TV" }, "market": { "type": "National" }, "media": { "shortName": "ABC" } }]
+      }
+    ]
+  },
+  "gameInfo": {
+    "venue": { "fullName": "Bryant-Denny Stadium", "address": { "city": "Tuscaloosa", "state": "AL" }, "capacity": 100077 },
+    "attendance": 100077,
+    "weather": { "displayValue": "Sunny", "temperature": 78 }
+  },
+  "boxscore": {
+    "teams": [
+      { "team": { "id": "2", "abbreviation": "AUB" }, "statistics": [{ "name": "firstDowns", "label": "1st Downs", "displayValue": "11" }, { "name": "totalYards", "label": "Total Yards", "displayValue": "240" }] },
+      { "team": { "id": "333", "abbreviation": "ALA" }, "statistics": [{ "name": "firstDowns", "label": "1st Downs", "displayValue": "16" }, { "name": "totalYards", "label": "Total Yards", "displayValue": "331" }] }
+    ],
+    "players": [
+      {
+        "team": { "id": "333" },
+        "statistics": [
+          { "name": "passing", "text": "Alabama Passing", "labels": ["C/ATT", "YDS", "TD", "INT"], "athletes": [{ "athlete": { "displayName": "Tide Quarterback", "jersey": "15" }, "stats": ["15/21", "201", "1", "0"] }], "totals": ["15/21", "201", "1", "0"] }
+        ]
+      },
+      {
+        "team": { "id": "2" },
+        "statistics": [
+          { "name": "rushing", "text": "Auburn Rushing", "labels": ["CAR", "YDS", "AVG", "TD"], "athletes": [{ "athlete": { "displayName": "Tiger Back" }, "stats": ["14", "77", "5.5", "1"] }] }
+        ]
+      }
+    ]
+  },
+  "leaders": [
+    { "team": { "id": "333" }, "leaders": [{ "name": "passingYards", "displayName": "Passing Yards", "leaders": [{ "displayValue": "15/21, 201 YDS, 1 TD", "athlete": { "displayName": "Tide Quarterback", "position": { "abbreviation": "QB" } } }] }] },
+    { "team": { "id": "2" }, "leaders": [{ "name": "passingYards", "displayName": "Passing Yards", "leaders": [{ "displayValue": "9/18, 99 YDS", "athlete": { "displayName": "Auburn QB" } }] }] }
+  ],
+  "scoringPlays": [
+    { "type": { "text": "Passing Touchdown" }, "text": "Tide Quarterback pass to Tide Receiver for 34 yds for a TD", "awayScore": 0, "homeScore": 7, "period": { "number": 1 }, "clock": { "displayValue": "9:02" }, "team": { "id": "333", "abbreviation": "ALA" } },
+    { "type": { "text": "Field Goal Good" }, "text": "Auburn 41 yd FG GOOD", "awayScore": 3, "homeScore": 7, "period": { "number": 1 }, "clock": { "displayValue": "2:15" }, "team": { "id": "2", "abbreviation": "AUB" } }
+  ],
+  "drives": {
+    "previous": [
+      { "id": "1", "description": "8 plays, 75 yards, 3:21", "team": { "id": "333", "abbreviation": "ALA" }, "start": { "period": { "number": 1 }, "text": "ALA 25" }, "timeElapsed": { "displayValue": "3:21" }, "yards": 75, "isScore": true, "offensivePlays": 8, "displayResult": "Touchdown" }
+    ],
+    "current": {
+      "id": "9", "team": { "id": "333", "abbreviation": "ALA" }, "start": { "period": { "number": 3 }, "text": "ALA 30" }, "yards": 22, "offensivePlays": 4, "displayResult": "",
+      "plays": [{ "text": "Tide Back run for 6 yards to the ALA 46." }, { "text": "Tide Quarterback pass complete to the AUB 48 for 6 yards." }]
+    }
+  },
+  "winprobability": [
+    { "homeWinPercentage": 0.61, "tiePercentage": 0, "playId": "1" },
+    { "homeWinPercentage": 0.742, "tiePercentage": 0, "playId": "2" }
+  ],
+  "pickcenter": [{ "provider": { "name": "ESPN BET" }, "details": "ALA -13.5", "overUnder": 48.5 }]
+}

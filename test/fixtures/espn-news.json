@@ -1,0 +1,6 @@
+{
+  "articles": [
+    { "headline": "Tide rolls into rivalry week", "description": "Alabama prepares for a big one.", "published": "2026-10-01T12:00:00Z", "links": { "web": { "href": "https://www.espn.com/college-football/story/_/id/1" } }, "images": [{ "url": "https://a.espncdn.com/photo/1.jpg" }] },
+    { "headline": "No link story", "description": "", "published": null }
+  ]
+}
