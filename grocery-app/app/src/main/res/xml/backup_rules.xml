@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lets Android's own phone backup keep the list, budget and receipts. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="sharedpref" path="grocery_buddy.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="sharedpref" path="grocery_buddy.xml" />
+    </device-transfer>
+</data-extraction-rules>

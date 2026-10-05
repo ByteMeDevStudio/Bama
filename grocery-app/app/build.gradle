@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.bytemedevstudio.grocerybuddy'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.bytemedevstudio.grocerybuddy'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    // One fixed key for every build, so a new APK installs over the old one
+    // and keeps the saved list, deals and receipts. It is a sideloading key,
+    // not a secret: don't reuse it for a Play Store release.
+    signingConfigs {
+        sideload {
+            storeFile file('signing.keystore')
+            storePassword 'grocerybuddy'
+            keyAlias 'grocerybuddy'
+            keyPassword 'grocerybuddy'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.sideload
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.sideload
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

@@ -1,0 +1,323 @@
+/* Large type, strong contrast, big touch targets. Every size is in rem so the
+   A− / A+ buttons scale the whole app. */
+:root {
+  --bg: #fffdf7;
+  --card: #ffffff;
+  --ink: #111111;
+  --muted: #444444;
+  --line: #9e9e9e;
+  --brand: #1b5e20;
+  --brand-ink: #ffffff;
+  --brand-soft: #e8f5e9;
+  --warn: #b71c1c;
+  --warn-soft: #ffebee;
+  --deal: #8a4b00;
+  --deal-soft: #fff3e0;
+  --focus: #0d47a1;
+  font-size: 22px;
+}
+html.size-0 { font-size: 19px; }
+html.size-1 { font-size: 22px; }
+html.size-2 { font-size: 25px; }
+html.size-3 { font-size: 28px; }
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, Roboto, "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+}
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 4px solid var(--focus); outline-offset: 2px; }
+
+/* Header */
+.top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--brand);
+  color: var(--brand-ink);
+}
+.top h1 { flex: 1; margin: 0; font-size: 1.2rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.size { display: flex; gap: 0.4rem; }
+.size button {
+  min-width: 2.6rem;
+  min-height: 2.4rem;
+  border: 2px solid var(--brand-ink);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--brand-ink);
+  font-weight: 700;
+}
+
+/* Screen */
+main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem 0.75rem 1.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+main:focus { outline: none; }
+h2 { font-size: 1.15rem; margin: 1.1rem 0 0.5rem; }
+h2:first-child { margin-top: 0.25rem; }
+p { margin: 0.4rem 0; }
+.muted { color: var(--muted); }
+.small { font-size: 0.85rem; }
+.center { text-align: center; }
+
+/* Bottom tabs */
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 2px solid var(--line);
+  background: var(--card);
+}
+.tabs button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  min-height: 3.6rem;
+  padding: 0.35rem 0.1rem;
+  border: 0;
+  background: transparent;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+.tabs button span { font-size: 1.3rem; line-height: 1; }
+.tabs button[aria-current="page"] {
+  color: var(--brand);
+  background: var(--brand-soft);
+  box-shadow: inset 0 5px 0 var(--brand);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.7rem;
+  padding: 0.45rem 0.9rem;
+  border: 2px solid var(--brand);
+  border-radius: 0.6rem;
+  background: var(--card);
+  color: var(--brand);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.btn.primary { background: var(--brand); color: var(--brand-ink); }
+.btn.danger { border-color: var(--warn); color: var(--warn); }
+.btn.danger.primary { background: var(--warn); color: #fff; }
+.btn.wide { display: flex; width: 100%; }
+.btn:active { transform: translateY(1px); }
+.row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.month-nav { display: flex; align-items: center; gap: 0.5rem; }
+.month-nav strong { flex: 1; text-align: center; font-size: 1.1rem; }
+.month-nav .btn { width: 3rem; flex: none; }
+.row > .btn { flex: 1 1 auto; }
+.stack > * + * { margin-top: 0.5rem; }
+
+/* Forms */
+label { display: block; font-weight: 700; margin: 0.6rem 0 0.2rem; }
+input[type="text"], input[type="date"], input[inputmode], select, textarea {
+  width: 100%;
+  min-height: 2.7rem;
+  padding: 0.4rem 0.6rem;
+  border: 2px solid var(--line);
+  border-radius: 0.5rem;
+  background: #fff;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--focus); outline: none; }
+.money-input { position: relative; }
+.money-input::before {
+  content: "$";
+  position: absolute;
+  left: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 700;
+}
+.money-input input { padding-left: 1.5rem; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.6rem; }
+.add-bar { display: flex; gap: 0.5rem; }
+.add-bar input { flex: 1; min-width: 0; }
+
+/* Cards and lists */
+.card {
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 0.8rem;
+  padding: 0.7rem 0.8rem;
+  margin: 0.6rem 0;
+}
+.card h3 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+.empty {
+  padding: 1rem;
+  border: 2px dashed var(--line);
+  border-radius: 0.8rem;
+  text-align: center;
+  color: var(--muted);
+}
+.group-title {
+  margin: 1rem 0 0.3rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--brand);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.6rem;
+  margin: 0.4rem 0;
+  border: 2px solid var(--line);
+  border-radius: 0.7rem;
+  background: var(--card);
+}
+.item.done { background: #f1f1f1; }
+.item.done .item-name { text-decoration: line-through; color: var(--muted); }
+.check {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid var(--brand);
+  border-radius: 0.5rem;
+  background: #fff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--brand-ink);
+}
+.item.done .check { background: var(--brand); }
+.item-main { flex: 1; min-width: 6.5em; }
+.item-name { font-weight: 700; overflow-wrap: break-word; hyphens: auto; }
+.item-meta { font-size: 0.85rem; color: var(--muted); }
+.item .edit {
+  flex: none;
+  margin-left: auto;
+  min-height: 2.5rem;
+  padding: 0.2rem 0.6rem;
+  border: 2px solid var(--line);
+  border-radius: 0.5rem;
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.tag {
+  display: inline-block;
+  padding: 0 0.4rem;
+  border-radius: 0.35rem;
+  background: var(--deal-soft);
+  color: var(--deal);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+/* Totals */
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.6rem 0.8rem;
+  margin: 0.8rem 0 0.5rem;
+  border-radius: 0.7rem;
+  background: var(--brand-soft);
+  font-weight: 700;
+}
+.total strong { font-size: 1.3rem; }
+
+/* Money */
+.big-number { font-size: 2rem; font-weight: 800; line-height: 1.15; }
+.big-number.bad { color: var(--warn); }
+.big-number.good { color: var(--brand); }
+.bar {
+  height: 1.2rem;
+  margin: 0.5rem 0;
+  border: 2px solid var(--ink);
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background: #fff;
+}
+.bar > div { height: 100%; background: var(--brand); }
+.bar.over > div { background: var(--warn); }
+.line {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #ddd;
+}
+.line:last-child { border-bottom: 0; }
+
+/* Deals */
+.deal { border-color: #e0a95e; background: #fffaf2; }
+.deal .price { font-size: 1.3rem; font-weight: 800; color: var(--deal); }
+.deal.expired { opacity: 0.6; }
+
+/* Dialog */
+.dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+}
+.dialog[hidden] { display: none; }
+.dialog-box {
+  width: 100%;
+  max-width: 34rem;
+  max-height: 92%;
+  overflow-y: auto;
+  padding: 1rem 0.9rem 1.2rem;
+  border-radius: 1rem 1rem 0 0;
+  background: var(--bg);
+}
+.dialog-box h2 { margin-top: 0; font-size: 1.25rem; }
+.dialog-actions { display: flex; gap: 0.5rem; margin-top: 1rem; }
+.dialog-actions .btn { flex: 1; }
+
+.choice-list .btn { justify-content: flex-start; text-align: left; }
+
+/* Toast */
+.toast {
+  position: fixed;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 4.6rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.7rem;
+  background: #222;
+  color: #fff;
+  font-weight: 700;
+}
+.toast[hidden] { display: none; }
+.toast span { flex: 1; }
+.toast button {
+  min-height: 2.4rem;
+  padding: 0.2rem 0.8rem;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: #fff;
+  font-weight: 800;
+}
