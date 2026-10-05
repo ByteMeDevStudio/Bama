@@ -13,6 +13,8 @@ An unofficial Alabama Crimson Tide football app for your home computer, with:
 
 Bama Hub only accepts connections from the computer it runs on, plus any machine you list (juno). Everyone else gets `403 Forbidden`.
 
+> **Also in this repo:** [Grocery Buddy](grocery-app/README.md), a large-text Android app for grocery lists, Piggly Wiggly and Dollar General deals, and a grocery budget in Columbia, AL.
+
 > Not affiliated with The University of Alabama, ESPN/ABC, Learfield or the Crimson Tide Sports Network.
 
 ## What's possible, and what isn't

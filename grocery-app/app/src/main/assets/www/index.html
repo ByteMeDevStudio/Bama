@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Grocery Buddy</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="top">
+    <h1 id="title">My List</h1>
+    <div class="size" role="group" aria-label="Text size">
+      <button type="button" id="smaller" aria-label="Smaller text">A&minus;</button>
+      <button type="button" id="bigger" aria-label="Bigger text">A+</button>
+    </div>
+  </header>
+
+  <main id="screen" tabindex="-1"></main>
+
+  <nav class="tabs" aria-label="Screens">
+    <button type="button" data-tab="list"><span aria-hidden="true">&#128221;</span>List</button>
+    <button type="button" data-tab="deals"><span aria-hidden="true">&#127991;</span>Deals</button>
+    <button type="button" data-tab="money"><span aria-hidden="true">&#128181;</span>Money</button>
+    <button type="button" data-tab="stores"><span aria-hidden="true">&#127978;</span>Stores</button>
+  </nav>
+
+  <div id="dialog" class="dialog" hidden>
+    <div class="dialog-box" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+      <h2 id="dialog-title"></h2>
+      <div id="dialog-body"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
